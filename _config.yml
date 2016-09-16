@@ -1,8 +1,8 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
 title: Portfólio Desirée
-description: 
-url: http://desuzuki.com.br/
+description:
+url: http://desuzuki.com.br
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: .tmp/src
@@ -15,8 +15,8 @@ exclude: ['assets']
 author:
   name: Eric Tonussi
   email: eric@tonussi.com
-  uri: 
-  bio: 
+  uri:
+  bio:
   twitter:
   github:
 
@@ -30,7 +30,7 @@ lsi: false
 limit_posts: 10
 
 # Permalink structure and pagination options
-permalink: pretty
+permalink: /:year/:month/:title/
 paginate: 10
 paginate_path: 'page:num'
 excerpt_separator: ''
