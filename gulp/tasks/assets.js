@@ -83,7 +83,8 @@ gulp.task('styles', () =>
       showFiles: true
     })))
     .pipe(gulp.dest('.tmp/assets/stylesheets'))
-    .pipe(when(!argv.prod, browserSync.stream()))
+    // .pipe(when(!argv.prod, browserSync.stream()))
+    .pipe(when(!argv.prod, browserSync.stream({match: '**/*.css'})))
 );
 
 // Function to properly reload your browser
