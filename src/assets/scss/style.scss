@@ -3,3 +3,5 @@ The main SCSS file for everything, yep
 */
 
 @import "reset";
+@import "mixins/media";
+@import "mixins/grid";

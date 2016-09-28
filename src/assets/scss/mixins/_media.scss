@@ -1,0 +1,31 @@
+$breakpoints: (
+    "sm":        544px,
+    "md":        768px,
+    "lg":        992px,
+    "xl":        1200px
+);
+
+@mixin media-up($width) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @media only screen and (min-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin media-down($width) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        $width: $width - 1px;
+        @media only screen and (max-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin media-only($width) {
+}
+
+@mixin media-between($min, $max) {
+}

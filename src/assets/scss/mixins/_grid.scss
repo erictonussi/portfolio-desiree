@@ -1,0 +1,8 @@
+.wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+    @include media-up(sm) {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
