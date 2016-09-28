@@ -1,0 +1,100 @@
+.site-header {
+    background-color: #333;
+    overflow: auto;
+    // margin: 0 -10px;
+
+    .site-title {
+        float: left;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        a {
+            line-height: 2;
+        }
+    }
+
+    ul a,
+    .site-title {
+        color: #fff;
+        font-weight: 300;
+        font-size: 14px;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        line-height: 50px;
+        display: block;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+        &:hover {
+            background-color: #000;
+        }
+    }
+}
+
+.menu-icon {
+    float: right;
+    line-height: 50px;
+    svg {
+        height: 18px;
+        vertical-align: middle;
+    }
+}
+
+@include media-down(sm) {
+    body {
+        padding-top: 50px;
+    }
+    .site-header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        .site-nav {
+        }
+        .trigger {
+            height: 0;
+            transition: height .5s;
+            overflow: hidden;
+            clear: both;
+        }
+        .trigger {
+            margin: 0 -10px;
+            a {
+                padding: 0 10px;
+            }
+                > :first-child {
+                    border-top: 1px solid #666;
+                }
+        }
+    }
+}
+
+@include media-up(sm) {
+    .site-header {
+        .wrapper {
+            display: table;
+            margin: auto;
+        }
+        .menu-icon {
+            display: none;
+        }
+        .site-title {
+        }
+        .site-nav {
+                float: left;
+        }
+        .trigger {
+            ul {
+                li {
+                    display: inline;
+                }
+            }
+        }
+        ul a,
+        .site-title {
+            padding: 0 15px;
+            display: inline-block;
+        }
+    }
+}
